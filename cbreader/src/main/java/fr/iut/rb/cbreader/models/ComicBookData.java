@@ -18,59 +18,29 @@ public class ComicBookData implements IComicBook, IObjectId {
     }
 
     private ObjectId id;
-    private String title;
-    private String fileName;
-    private String series;
-    private int number;
 
     @Override
     public String getTitle() {
-        return title;
-    }
-
-    @Override
-    public void setTitle(String title) {
-        this.title = title;
+        return book.getTitle();
     }
 
     @Override
     public String getFileName() {
-        return fileName;
-    }
-
-    @Override
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
+        return book.getFileName();
     }
 
     @Override
     public String getSeries() {
-        return series;
-    }
-
-    @Override
-    public void setSeries(String series) {
-        this.series = series;
+        return book.getSeries();
     }
 
     @Override
     public int getNumber() {
-        return number;
-    }
-
-    @Override
-    public void setNumber(int number) {
-        this.number = number;
+        return book.getNumber();
     }
 
     @Override
     public ObjectId getId() {
         return id;
     }
-
-    @Override
-    public void setId(ObjectId id) {
-        this.id = id;
-    }
-
 }

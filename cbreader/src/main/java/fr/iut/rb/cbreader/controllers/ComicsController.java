@@ -26,7 +26,7 @@ public class ComicsController {
         this.service = service;
     }
 
-    @PostMapping("book/add")
+    @PostMapping("/book/add")
     @CrossOrigin
     public ResponseEntity<ComicBook> AddNewBook(@RequestParam(value = "book") String str,
             @RequestParam(value = "file") MultipartFile file) throws JsonMappingException, JsonProcessingException {

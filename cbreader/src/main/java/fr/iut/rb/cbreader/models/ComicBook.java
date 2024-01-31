@@ -13,18 +13,8 @@ public class ComicBook implements IComicBook{
     }
 
     @Override
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    @Override
     public String getFileName() {
         return fileName;
-    }
-
-    @Override
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
     }
 
     @Override
@@ -33,18 +23,8 @@ public class ComicBook implements IComicBook{
     }
 
     @Override
-    public void setSeries(String series) {
-        this.series = series;
-    }
-
-    @Override
     public int getNumber() {
         return number;
-    }
-
-    @Override
-    public void setNumber(int number) {
-        this.number = number;
     }
 
     @Override
