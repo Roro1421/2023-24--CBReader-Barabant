@@ -1,5 +1,6 @@
 package fr.iut.rb.cbreader.repositories;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -38,4 +39,10 @@ public class FileManager {
         }
     }
 
+    public int GetFileSize(String fileName){
+        Path destinationPath = Paths.get(booksLocation, fileName);
+        destinationPath = destinationPath.normalize().toAbsolutePath();
+        File file = new File(destinationPath.toString());
+        return (int)file.length();
+    }
 }
