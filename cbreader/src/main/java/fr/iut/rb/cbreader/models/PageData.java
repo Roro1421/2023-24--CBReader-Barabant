@@ -21,8 +21,7 @@ public class PageData implements IObjectId{
      * @param fileName
      * @param idReading
      */
-    public PageData(ObjectId id, int number, String fileName, ObjectId idReading) {
-        this.id = id;
+    public PageData( int number, String fileName, ObjectId idReading) {
         this.number = number;
         this.fileName = fileName;
         IdReading = idReading;

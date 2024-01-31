@@ -26,9 +26,8 @@ public class ReadingData implements IObjectId{
      * @param numberOfPages
      * @param idComicBook
      */
-    public ReadingData(ObjectId id, int currentPage, int numberOfPages, ObjectId idComicBook) {
-        this.id = id;
-        this.currentPage = currentPage;
+    public ReadingData(int numberOfPages, ObjectId idComicBook) {
+        this.currentPage = 1;
         this.numberOfPages = numberOfPages;
         this.idComicBook = idComicBook;
         this.dateStartReading = Date.from(Instant.now());

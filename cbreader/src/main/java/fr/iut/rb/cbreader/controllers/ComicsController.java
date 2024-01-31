@@ -2,6 +2,7 @@ package fr.iut.rb.cbreader.controllers;
 
 import java.io.IOException;
 
+import org.bson.types.ObjectId;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import fr.iut.rb.cbreader.models.ComicBook;
 import fr.iut.rb.cbreader.models.ComicsBookInfo;
+import fr.iut.rb.cbreader.models.ReadingData;
 import fr.iut.rb.cbreader.services.ComicsService;
 
 @RestController
@@ -41,4 +43,10 @@ public class ComicsController {
     public ComicsBookInfo[] GetAllCB(){
         return this.service.GetAllCB();
     }
+
+    @GetMapping("/book/open")
+    public ReadingData getMethodName(@RequestParam ObjectId id) throws IOException {
+        return this.service.OpenCB(id);
+    }
+    
 }
